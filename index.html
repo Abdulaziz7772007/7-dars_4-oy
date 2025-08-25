@@ -26,18 +26,25 @@
 	</header>
 
 	<!-- choose zone -->
-	<section id="choose-zone" class=mx-auto grid w-full max-w-[476px] grid-cols-2 gap-x-10 gap-y-4 bg-path
-		bg-[center_top_4rem] bg-no-repeat max-[600px]:max-w-[312px] max-[600px]:gap-x-[50px] max-[600px]:gap-y-[15px]
-		max-[600px]:bg-path-small>
-		<div class="grid grid-cols-2 gap-4 max-w-md mx-auto bg-[url('./images/path.svg')] bg-cover bg-center ">
-			<button
-				class="js-hand h-[173px] w-[168px] place-self-center rounded-full shadow-drop transition-shadow hover:shadow-hover-shadow max-[600px]:h-[133px] max-[600px]:w-[130px]"><img
-					class="hand hover:cursor-pointer" src="./images/rock.svg" alt="rock"></button>
-			<button
-				class="js-hand h-[173px] w-[168px] place-self-center rounded-full shadow-drop transition-shadow hover:shadow-hover-shadow max-[600px]:h-[133px] max-[600px]:w-[130px]"><img
-					class="hand hover:cursor-pointer" src="./images/paper.svg" alt="paper"></button>
-			<button class="col-span-2 flex justify-center"><img class="hand hover:cursor-pointer" src="./images/scissors.svg"
-					alt="scissors"></button>
+	<section id="choose-zone" class="grid place-items-center">
+		<div class="grid grid-cols-2 grid-rows-3 w-full max-w-[500px] gap-x-20 gap-y-6 bg-no-repeat bg-center bg-[url('../images/triangle.svg')]" id="zoneGrid">
+			<button>
+				<img class="hand hover:cursor-pointer" src="./images/rock.svg" alt="rock" width="150px" height="150px">
+			</button>
+			<button>
+				<img class="hand hover:cursor-pointer" src="./images/paper.svg" alt="paper" width="150px" height="150px">
+			</button>
+			<button class="col-start-1 col-end-3 				place-items-center">
+				<img class="hand  hover:cursor-pointer" src="./images/scissors.svg" alt="scissors" width="150px" height="150px">
+			</button>
+			<button>
+				<img class="hand hard-mode  hidden hover:cursor-pointer" src="./images/spock.svg" alt="spock" width="150px"
+					height="150px">
+			</button>
+			<button>
+				<img class="hand hard-mode hidden hover:cursor-pointer" src="./images/lizard.svg" alt="lizard" width="150px"
+					height="150px">
+			</button>
 		</div>
 	</section>
 	<!-- Status zone -->
@@ -55,6 +62,8 @@
 
 		</div>
 	</section>
+
+	<button class="btn btn-info absolute bottom-25 right-10" id="modeChanger">Easy mode</button>
 
 	<!-- Open the modal using ID.showModal() method -->
 	<button
