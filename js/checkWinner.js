@@ -17,6 +17,7 @@ export function checkWinner(ai, user) {
       score = score - 1
     }
     scoreEl.textContent = score
+    
     return 'AI wins'
   } else {
     score = score + 1
