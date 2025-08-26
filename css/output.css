@@ -7,9 +7,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-blue-50: oklch(97% 0.014 254.604);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-blue-950: oklch(28.2% 0.091 267.935);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
@@ -1457,6 +1460,9 @@
   .h-\[89px\] {
     height: 89px;
   }
+  .min-h-\[100vh\] {
+    min-height: 100vh;
+  }
   .w-50 {
     width: calc(var(--spacing) * 50);
   }
@@ -1477,6 +1483,9 @@
   }
   .max-w-\[740px\] {
     max-width: 740px;
+  }
+  .min-w-\[100vh\] {
+    min-width: 100vh;
   }
   .min-w-\[130px\] {
     min-width: 130px;
@@ -1549,17 +1558,8 @@
   .gap-x-14 {
     column-gap: calc(var(--spacing) * 14);
   }
-  .gap-x-20 {
-    column-gap: calc(var(--spacing) * 20);
-  }
-  .gap-y-4 {
-    row-gap: calc(var(--spacing) * 4);
-  }
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
-  }
-  .gap-y-12 {
-    row-gap: calc(var(--spacing) * 12);
   }
   .rounded-\[6px\] {
     border-radius: 6px;
@@ -1590,20 +1590,20 @@
   .border-white {
     border-color: var(--color-white);
   }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
+  .border-b-blue-600 {
+    border-bottom-color: var(--color-blue-600);
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-blue-700 {
+    background-color: var(--color-blue-700);
   }
   .bg-blue-800 {
     background-color: var(--color-blue-800);
   }
-  .bg-\[url\(\'\.\.\/images\/\'\)\] {
-    background-image: url('../images/');
-  }
-  .bg-\[url\(\'\.\.\/images\/Polygon\.svg\'\)\] {
-    background-image: url('../images/Polygon.svg');
-  }
-  .bg-\[url\(\'\.\.\/images\/p\'\)\] {
-    background-image: url('../images/p');
+  .bg-blue-950 {
+    background-color: var(--color-blue-950);
   }
   .bg-\[url\(\'\.\.\/images\/polygon\.svg\'\)\] {
     background-image: url('../images/polygon.svg');
@@ -1667,8 +1667,8 @@
   .text-wrap {
     text-wrap: wrap;
   }
-  .text-blue-950 {
-    color: var(--color-blue-950);
+  .text-blue-50 {
+    color: var(--color-blue-50);
   }
   .text-white {
     color: var(--color-white);

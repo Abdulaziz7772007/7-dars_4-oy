@@ -1,17 +1,26 @@
-import { rock, scissors, paper, lizard, spock } from './constants.js'
-import { aiChoose } from './ai-choose.js'
+import { lizard, paper, rock, scissors, spock } from './constants.js'
+import { scoreEl } from './html-selection.js'
 
-export function checkWinner(ai, ucer) {
-	if (ai == ucer) {
-		return 'draw'
-	} else if (
-		(ai == rock && (ucer == scissors || user == lizard)) ||
-		(ai == scissors && (ucer == paper || user == lizard)) ||
-		(ai == paper && (ucer == rock || ucer == spock)) || (ai == lizard && (ucer == spock || ucer == paper)) || (ai == spock && (ucer == scissors || ucer ==rock))
-	) {
-		return 'AI wins'
-	} else {
-		return 'Ucer wins'
-	}
+let score = 0 // score global saqlanadi
+
+export function checkWinner(ai, user) {
+  if (ai === user) {
+    return 'draw'
+  } else if (
+    (ai === rock && (user === scissors || user === lizard)) ||
+    (ai === scissors && (user === paper || user === lizard)) ||
+    (ai === paper && (user === rock || user === spock)) ||
+    (ai === lizard && (user === spock || user === paper)) ||
+    (ai === spock && (user === scissors || user === rock))
+  ) {
+    if (score > 0) {
+      score = score - 1
+    }
+    scoreEl.textContent = score
+    return 'AI wins'
+  } else {
+    score = score + 1
+    scoreEl.textContent = score
+    return 'User wins'
+  }
 }
-

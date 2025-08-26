@@ -7,6 +7,9 @@ const aiImg = document.querySelector('.ai')
 const statusText = document.querySelector('.statusText')
 const modeChangerEl = document.getElementById('modeChanger')
 const handsHard = document.querySelectorAll('.hard-mode')
-const zoneGridEl = document.getElementById('zoneGrid')
+const zoneGridEl = document.getElementById('zoneGrid'),
+	scoreEl = document.getElementById('score')
 
-export { handsEL, userImg, chooseZone, statusZone, returnGameBtn, aiImg, statusText, modeChangerEl, handsHard,zoneGridEl }
+
+
+export { handsEL, userImg, chooseZone, statusZone, returnGameBtn, aiImg, statusText, modeChangerEl, handsHard,zoneGridEl, scoreEl }

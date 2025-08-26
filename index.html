@@ -9,79 +9,82 @@
 	<script defer type="module" src="./js/main.js"></script>
 </head>
 
-<body class="bg-blue-950">
-	<!-- hisoblagich -->
-	<header class="mx-auto w-full max-w-[740px] px-3 py-10 max-[600px]:max-w-full max-[600px]:p-6">
+<body>
+	<div class="bg-blue-950 min-h-[100vh] w-full">
+		<!-- hisoblagich -->
+		<header class="mx-auto w-full max-w-[740px] px-3 py-10 max-[600px]:max-w-full max-[600px]:p-6">
 
-		<div
-			class="flex items-center  justify-center mb-5 gap-30 rounded-[12px] border-[3px] border-grey px-4 py-[14px] max-[600px]:rounded-[3px] max-[600px]:p-4">
-			<img class="h-[89px] w-[152px] object-contain max-[600px]:h-10 max-[600px]:w-[79px]" src="./images/logo.svg"
-				alt="logo">
-			<span
-				class="flex w-[126px] flex-col items-center rounded-[6px] text-blue-50 border-4 bg-blue-800 bg-clip-border  p-3 shadow-drop max-[600px]:w-16 max-[600px]:rounded max-[600px]:p-[8px]">
-				<span class="font-semibold uppercase tracking-[2.5px] text-blue max-[600px]:text-[10px]">Score</span>
-				<span id="score" class="text-[64px] font-bold leading-none text-dark-blue max-[600px]:text-[40px]">0</span>
-			</span>
-		</div>
-	</header>
+			<div
+				class="flex items-center  justify-center mb-5 gap-30 rounded-[12px] border-[3px] border-grey px-4 py-[14px] max-[600px]:rounded-[3px] max-[600px]:p-4">
+				<img class="h-[89px] w-[152px] object-contain max-[600px]:h-10 max-[600px]:w-[79px]" src="./images/logo.svg"
+					alt="logo">
+				<span
+					class="flex w-[126px] flex-col items-center rounded-[6px] text-blue-50 border-4 bg-blue-800 bg-clip-border  p-3 shadow-drop max-[600px]:w-16 max-[600px]:rounded max-[600px]:p-[8px]">
+					<span class="font-semibold uppercase tracking-[2.5px] text-blue max-[600px]:text-[10px]">Score</span>
+					<span id="score" class="text-[64px] font-bold leading-none text-dark-blue max-[600px]:text-[40px]">0</span>
+				</span>
+			</div>
+		</header>
 
-	<!-- choose zone -->
-	<section id="choose-zone" class="grid place-items-center">
-		<div
-			class="grid grid-cols-2 grid-rows-2 w-full max-w-[500px] place-items-center gap-x-14 gap-y-6 bg-no-repeat bg-center bg-[url('../images/triangle.svg')]"
-			id="zoneGrid">
-			<button>
-				<img class="hand hover:cursor-pointer " src="./images/rock.svg" alt="rock" width="150px" height="150px">
-			</button>
-			<button>
-				<img class="hand hover:cursor-pointer" src="./images/paper.svg" alt="paper" width="150px" height="150px">
-			</button>
-			<button class="col-start-1 col-end-3 				place-items-center">
-				<img class="hand  hover:cursor-pointer" src="./images/scissors.svg" alt="scissors" width="150px" height="150px">
-			</button>
-			<button>
-				<img class="hand hard-mode  hidden hover:cursor-pointer" src="./images/spock.svg" alt="spock" width="150px"
-					height="150px">
-			</button>
-			<button>
-				<img class="hand hard-mode hidden hover:cursor-pointer" src="./images/lizard.svg" alt="lizard" width="150px"
-					height="150px">
-			</button>
-		</div>
-	</section>
-	<!-- Status zone -->
-	<section id="status-zone" class="flex items-center justify-center max-[600px]:gap-[50px] hidden">
-		<div class="flex">
-			<img id="user" src="" alt="">
-			<div>
-				<button id="refreshGameBtn" class="btn text-2xl  w-50 h-20 mb-20 bg-blue-800">Return game</button>
-				<div role="alert" class="alert text-2xl alert-info w-50 h-20 block">
-					<span class="statusText"></span>
+		<!-- choose zone -->
+		<section id="choose-zone" class="grid place-items-center">
+			<div
+				class="grid grid-cols-2 grid-rows-2 w-full max-w-[500px] place-items-center gap-x-14 gap-y-6 bg-no-repeat bg-center bg-[url('../images/triangle.svg')]"
+				id="zoneGrid">
+				<button>
+					<img class="hand hover:cursor-pointer " src="./images/rock.svg" alt="rock" width="150px" height="150px">
+				</button>
+				<button>
+					<img class="hand hover:cursor-pointer" src="./images/paper.svg" alt="paper" width="150px" height="150px">
+				</button>
+				<button class="col-start-1 col-end-3 				place-items-center">
+					<img class="hand  hover:cursor-pointer" src="./images/scissors.svg" alt="scissors" width="150px"
+						height="150px">
+				</button>
+				<button>
+					<img class="hand hard-mode  hidden hover:cursor-pointer" src="./images/spock.svg" alt="spock" width="150px"
+						height="150px">
+				</button>
+				<button>
+					<img class="hand hard-mode hidden hover:cursor-pointer" src="./images/lizard.svg" alt="lizard" width="150px"
+						height="150px">
+				</button>
+			</div>
+		</section>
+		<!-- Status zone -->
+		<section id="status-zone" class="flex items-center justify-center max-[600px]:gap-[50px] hidden">
+			<div class="flex">
+				<img id="user" src="" alt="">
+				<div>
+					<button id="refreshGameBtn" class="btn text-2xl  w-50 h-20 mb-20 bg-blue-800">Return game</button>
+					<div role="alert" class="alert text-2xl alert-info w-50 h-20 block">
+						<span class="statusText"></span>
+					</div>
+				</div>
+
+				<img class="ai" src="./images/oval.svg" alt="oval">
+
+			</div>
+		</section>
+
+		<button class="btn btn-info absolute bottom-25 right-10" id="modeChanger">Easy mode</button>
+
+		<!-- Open the modal using ID.showModal() method -->
+		<button
+			class="btn absolute bottom-8 right-8 min-w-[130px] max-w-[130px] rounded-lg border bg-blue-700 border-b-blue-600 p-[10px] font-semibold uppercase tracking-[2.5px] text-white transition-all hover:bg-white hover:text-blue-950 active:scale-95 max-[600px]:bottom-14 max-[600px]:left-2/4 max-[600px]:-translate-x-2/4"
+			onclick="my_modal_1.showModal()">RULES</button>
+		<dialog id="my_modal_1" class="modal">
+			<div class="modal-box">
+				<img src="./images/rules.svg" alt="rules">
+				<div class="modal-action">
+					<form method="dialog">
+						<!-- if there is a button in form, it will close the modal -->
+						<button class="btn">Close</button>
+					</form>
 				</div>
 			</div>
-
-			<img class="ai" src="./images/oval.svg" alt="oval">
-
-		</div>
-	</section>
-
-	<button class="btn btn-info absolute bottom-25 right-10" id="modeChanger">Easy mode</button>
-
-	<!-- Open the modal using ID.showModal() method -->
-	<button
-		class="btn absolute bottom-8 right-8 min-w-[130px] max-w-[130px] rounded-lg border border-white p-[10px] font-semibold uppercase tracking-[2.5px] text-white transition-all hover:bg-white hover:text-blue-950 active:scale-95 max-[600px]:bottom-14 max-[600px]:left-2/4 max-[600px]:-translate-x-2/4"
-		onclick="my_modal_1.showModal()">RULES</button>
-	<dialog id="my_modal_1" class="modal">
-		<div class="modal-box">
-			<img src="./images/rules.svg" alt="rules">
-			<div class="modal-action">
-				<form method="dialog">
-					<!-- if there is a button in form, it will close the modal -->
-					<button class="btn">Close</button>
-				</form>
-			</div>
-		</div>
-	</dialog>
+		</dialog>
+	</div>
 </body>
 
 </html>
