@@ -1,7 +1,8 @@
+import { aiChoose } from './ai-choose.js'
 import { lizard, paper, rock, scissors, spock } from './constants.js'
 import { scoreEl } from './html-selection.js'
 
-let score = 0 // score global saqlanadi
+let score = 0 
 
 export function checkWinner(ai, user) {
   if (ai === user) {
