@@ -2,7 +2,7 @@
 import { aiChoose } from './ai-choose.js'
 import { checkWinner } from './checkWinner.js'
 import { mode, modeChanger } from './constants.js'
-import { aiImg, handsEL, modeChangerEl, returnGameBtn, statusText, userImg } from './html-selection.js'
+import { aiImg, handsEL, modeChangerEl, returnGameBtn, rulesEl, statusText, userImg, zoneGridEl } from './html-selection.js'
 import { switchZone } from './switch-zone.js'
 
 // hands
@@ -27,14 +27,19 @@ returnGameBtn.addEventListener('click', () => {
 	aiImg.src = `./images/oval.svg`
 })
 
+
+
 // mode changer
 
 modeChangerEl.addEventListener('click', () => {
 	if (mode === 'easy') {
+		rulesEl.src = '../images/rules-pro.svg'
 		modeChanger('hard')
 		modeChangerEl.textContent = 'Hard mode'
 	} else {
 		modeChanger('easy')
+
 		modeChangerEl.textContent = 'Easy mode'
 	}
 })
+

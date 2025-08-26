@@ -28,26 +28,24 @@
 
 		<!-- choose zone -->
 		<section id="choose-zone" class="grid place-items-center">
-			<div
-				class="grid grid-cols-2 grid-rows-2 w-full max-w-[500px] place-items-center gap-x-14 gap-y-6 bg-no-repeat bg-center bg-[url('../images/triangle.svg')]"
+			<div data-mode="easy"
+				class=" group grid grid-cols-2 grid-rows-2 w-full max-w-[500px] place-items-center gap-x-20 gap-y-6 bg-no-repeat bg-center bg-[url('../images/triangle.svg')] data-[mode=hard]:grid-cols-2 data-[mode=hard]:grid-rows-3 data-[mode=hard]:gap-2 data-[mode=hard]:bg-[url('../images/polygon.svg')]"
 				id="zoneGrid">
-				<button>
-					<img class="hand hover:cursor-pointer " src="./images/rock.svg" alt="rock" width="150px" height="150px">
+				<button
+					class="hand group-data-[mode=hard]:col-start-1  group-data-[mode=hard]:col-end-3 group-data-[mode=hard]:place-items-center group-data-[mode=hard]:translate-y-6">
+					<img class=" hover:cursor-pointer " src="./images/rock.svg" alt="rock" width="150px" height="150px">
 				</button>
-				<button>
-					<img class="hand hover:cursor-pointer" src="./images/paper.svg" alt="paper" width="150px" height="150px">
+				<button class="hand group-data-[mode=hard]:place-items-center">
+					<img class=" hover:cursor-pointer " src="./images/paper.svg" alt="paper" width="150px" height="150px">
 				</button>
-				<button class="col-start-1 col-end-3 				place-items-center">
-					<img class="hand  hover:cursor-pointer" src="./images/scissors.svg" alt="scissors" width="150px"
-						height="150px">
+				<button class="hand group-data-[mode=easy]:col-start-1 group-data-[mode=easy]:col-end-3 ">
+					<img class="hover:cursor-pointer " src="./images/scissors.svg" alt="scissors" width="150px" height="150px">
 				</button>
-				<button>
-					<img class="hand hard-mode  hidden hover:cursor-pointer" src="./images/spock.svg" alt="spock" width="150px"
-						height="150px">
+				<button class="hand hidden group-data-[mode=hard]:block group-data-[mode=hard]:place-items-end">
+					<img class="hover:cursor-pointer " src="./images/spock.svg" alt="spock" width="150px" height="150px">
 				</button>
-				<button>
-					<img class="hand hard-mode hidden hover:cursor-pointer" src="./images/lizard.svg" alt="lizard" width="150px"
-						height="150px">
+				<button class="hand hidden group-data-[mode=hard]:block group-data-[mode=hard]:place-items-start">
+					<img class="hover:cursor-pointer " src="./images/lizard.svg" alt="lizard" width="150px" height="150px">
 				</button>
 			</div>
 		</section>
@@ -75,7 +73,7 @@
 			onclick="my_modal_1.showModal()">RULES</button>
 		<dialog id="my_modal_1" class="modal">
 			<div class="modal-box">
-				<img src="./images/rules.svg" alt="rules">
+				<img id="rules" src="./images/rules.svg" alt="rules">
 				<div class="modal-action">
 					<form method="dialog">
 						<!-- if there is a button in form, it will close the modal -->

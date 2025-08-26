@@ -1484,9 +1484,6 @@
   .max-w-\[740px\] {
     max-width: 740px;
   }
-  .min-w-\[100vh\] {
-    min-width: 100vh;
-  }
   .min-w-\[130px\] {
     min-width: 130px;
   }
@@ -1558,6 +1555,9 @@
   .gap-x-14 {
     column-gap: calc(var(--spacing) * 14);
   }
+  .gap-x-20 {
+    column-gap: calc(var(--spacing) * 20);
+  }
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
   }
@@ -1587,14 +1587,8 @@
     color: var(--color-info-content);
     --alert-color: var(--color-info);
   }
-  .border-white {
-    border-color: var(--color-white);
-  }
   .border-b-blue-600 {
     border-bottom-color: var(--color-blue-600);
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .bg-blue-700 {
     background-color: var(--color-blue-700);
@@ -1708,6 +1702,52 @@
     --btn-color: var(--color-info);
     --btn-fg: var(--color-info-content);
   }
+  .group-data-\[mode\=easy\]\:col-start-1 {
+    &:is(:where(.group)[data-mode="easy"] *) {
+      grid-column-start: 1;
+    }
+  }
+  .group-data-\[mode\=easy\]\:col-end-3 {
+    &:is(:where(.group)[data-mode="easy"] *) {
+      grid-column-end: 3;
+    }
+  }
+  .group-data-\[mode\=hard\]\:col-start-1 {
+    &:is(:where(.group)[data-mode="hard"] *) {
+      grid-column-start: 1;
+    }
+  }
+  .group-data-\[mode\=hard\]\:col-end-3 {
+    &:is(:where(.group)[data-mode="hard"] *) {
+      grid-column-end: 3;
+    }
+  }
+  .group-data-\[mode\=hard\]\:block {
+    &:is(:where(.group)[data-mode="hard"] *) {
+      display: block;
+    }
+  }
+  .group-data-\[mode\=hard\]\:translate-y-6 {
+    &:is(:where(.group)[data-mode="hard"] *) {
+      --tw-translate-y: calc(var(--spacing) * 6);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .group-data-\[mode\=hard\]\:place-items-center {
+    &:is(:where(.group)[data-mode="hard"] *) {
+      place-items: center;
+    }
+  }
+  .group-data-\[mode\=hard\]\:place-items-end {
+    &:is(:where(.group)[data-mode="hard"] *) {
+      place-items: end;
+    }
+  }
+  .group-data-\[mode\=hard\]\:place-items-start {
+    &:is(:where(.group)[data-mode="hard"] *) {
+      place-items: start;
+    }
+  }
   .hover\:cursor-pointer {
     &:hover {
       @media (hover: hover) {
@@ -1735,6 +1775,36 @@
       --tw-scale-y: 95%;
       --tw-scale-z: 95%;
       scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  .data-\[mode\=hard\]\:grid-cols-2 {
+    &[data-mode="hard"] {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .data-\[mode\=hard\]\:grid-rows-3 {
+    &[data-mode="hard"] {
+      grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .data-\[mode\=hard\]\:gap-2 {
+    &[data-mode="hard"] {
+      gap: calc(var(--spacing) * 2);
+    }
+  }
+  .data-\[mode\=hard\]\:gap-8 {
+    &[data-mode="hard"] {
+      gap: calc(var(--spacing) * 8);
+    }
+  }
+  .data-\[mode\=hard\]\:gap-10 {
+    &[data-mode="hard"] {
+      gap: calc(var(--spacing) * 10);
+    }
+  }
+  .data-\[mode\=hard\]\:bg-\[url\(\'\.\.\/images\/polygon\.svg\'\)\] {
+    &[data-mode="hard"] {
+      background-image: url('../images/polygon.svg');
     }
   }
   .max-\[600px\]\:bottom-14 {
