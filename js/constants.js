@@ -41,14 +41,14 @@ export function modeChanger(value) {
 					'col-start-1',
 					'col-end-3',
 					'place-items-center',
-					"translate-y-6"
+					'translate-y-6'
 				)
 			} else {
 				el.parentElement.classList.remove(
 					'col-start-1',
 					'col-end-3',
 					'place-items-center',
-					"translate-y-6"
+					'translate-y-6'
 				)
 				el.parentElement.classList.add('place-items-center')
 			}
@@ -72,12 +72,16 @@ export function modeChanger(value) {
 				'place-items-center',
 				"bg-[url('../images/triangle.svg')]"
 			)
-			zoneGridEl.classList.add('grid-cols-2', 'grid-rows-3', 'gap-10'),
-			"bg-[url('../images/Polygon.svg')]"
+			zoneGridEl.classList.add(
+				'grid-cols-2',
+				'grid-rows-3',
+				'gap-10',
+				"bg-[url('../images/polygon.svg')]"
+			)
 			hands.classList.remove('hidden')
 		} else {
 			zoneGridEl.classList.remove('grid-cols-2', 'grid-rows-3', 'gap-10'),
-			"bg-[url('../images/Polygon.svg')]"
+				"bg-[url('../images/polygon.svg')]"
 			zoneGridEl.classList.add(
 				'grid-cols-2',
 				'grid-rows-2',
