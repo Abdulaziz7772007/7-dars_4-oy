@@ -45,6 +45,7 @@ handsEL.forEach(el => {
 returnGameBtn.addEventListener('click', () => {
 	switchZone(false)
 	aiImg.src = `./images/oval.svg`
+	
 })
 
 // mode changer
