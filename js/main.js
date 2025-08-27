@@ -56,6 +56,7 @@ modeChangerEl.addEventListener('click', () => {
 		modeChangerEl.textContent = 'Hard mode'
 	} else {
 		modeChanger('easy')
+		rulesEl.src = '../images/rules.svg'
 
 		modeChangerEl.textContent = 'Easy mode'
 	}
